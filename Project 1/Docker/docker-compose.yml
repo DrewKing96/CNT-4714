@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+ webswing:
+  image: webswing/webswing-eval:20.2.1
+  environment:
+   - WEBSWING_CONFIG=/opt/app/config/webswing.config
+   - WEBSWING_ADMIN_URL=http://165.227.87.100:8090
+   - WEBSWING_SERVER_PUBLICURL=http://165.227.87.100
+  volumes:
+   - /opt/app:/opt/app
+  ports:
+   - "80:8080"
+   - "8090:8090"
